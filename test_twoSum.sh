@@ -20,14 +20,14 @@ answers=(
 )
 
 # Get the number of test cases
-num_cases= ## Fill num_cases with the number of test cases
+num_cases=3
 pass_count=0
 
 # Loop through each test case
 for ((i=0; i<num_cases; i++)); do
-    nums= ## Fill nums with the current test case
-    target= ## Fill target with the current test case
-    answer= ## Fill expected with the current test case
+    nums=${nums_list[i]}
+    target=${targets[i]}
+    answer=${answers[i]}
     
     # Run the twoSum function and capture the output
     output=$(python3 -c "from main import twoSum; print(twoSum($nums, $target))")
